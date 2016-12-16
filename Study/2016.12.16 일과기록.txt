@@ -1,0 +1,44 @@
+
+2016.12.16 금요일
+
+1. 엑셀 업로더
+  - String 이외의 타입도 읽어오도록 프로그램 변경
+  
+2. Java Enum(열거 타입) - JDK 1.5부터
+  - 생성법
+  
+   enum Month{
+   	JANURARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST
+   	, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER;
+   }
+  
+  - 활용 1
+   
+   enum Month {
+  	 	
+  	 	JANURARY("1월"), 
+  	 	FEBRUARY("2월"), 
+	  	 MARCH("3월"), 
+	   	APRIL("4월"), 
+   		MAY("5월"), 
+   		JUNE("6월"), 
+  	 	JULY("7월"), 
+  	 	AUGUST("8월"),
+  	 	SEPTEMBER("9월"), 
+  	 	OCTOBER("10월"), 
+  	 	NOVEMBER("11월"), 
+ 	  	DECEMBER("12월");
+   	
+ 	  	private String monthKr;
+   	
+  	 	private Month(){}
+  	 	private Month(String monthKr)
+  	 	{
+   			this.monthKr=monthKr;
+  	 	}
+   	
+  	 	public String getMonthKr()
+  	 	{
+  	 		return monthKr;
+  	 	}
+   }
